@@ -1,0 +1,29 @@
+/*Fonts*/
+
+/*Logo*/
+#logo {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 5px;
+    padding-right: 30px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0%;
+}
+
+li {
+    margin-right: 3rem;
+}
+/* Main */
+/*Footer*/
+/**/
