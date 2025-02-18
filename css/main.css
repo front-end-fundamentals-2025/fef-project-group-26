@@ -24,6 +24,35 @@ ul {
 li {
     margin-right: 3rem;
 }
+
+.navbar a:hover {
+    color: rgb(8, 238, 238);
+}
+
+/* */
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.mid-main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.mid-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
 /* Main */
 /*Footer*/
 /**/
