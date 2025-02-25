@@ -60,18 +60,21 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: wheat;
 }
 
 .mid-container {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: tomato;
 }
 
 .bottom-container {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: yellowgreen;
 }
 /* Main */
 /*Footer*/
