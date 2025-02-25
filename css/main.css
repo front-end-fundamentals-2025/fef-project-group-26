@@ -86,6 +86,11 @@ li {
 .showcase-img {
  height: 400px;
   width: 400px;
+  border-bottom: 7px solid rgb(235, 235, 235);
+}
+
+.showcase-shadows {
+  box-shadow: 0px 0px 18px rgb(207, 207, 207);
 }
 
 .showcase-item-text {
@@ -103,7 +108,7 @@ li {
 .bottom-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0px;
   background-color: rgb(0, 0, 0);
 }
 /* Main */
