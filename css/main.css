@@ -87,6 +87,26 @@ li {
   background-repeat: no-repeat;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.home-title {
+  color: white;
+  font-size: 60px;
+  width: 300px;
+}
+
+.home-text {
+  color: aliceblue;
+  font-size: 20px;
+  width: 300px;
+}
+
 .showcase-container {
   place-items: center;
   display: grid;
@@ -94,7 +114,7 @@ li {
 }
 
 .showcase-img {
- height: 400px;
+  height: 400px;
   width: 400px;
   border-bottom: 7px solid rgb(235, 235, 235);
 }
@@ -135,7 +155,6 @@ li {
     height: 300px;
     width: 300px;
   }
-  
 }
 
 @media screen and (max-width: 660px) {
