@@ -37,7 +37,6 @@
 header {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid black;
 }
 
 ul {
@@ -55,6 +54,7 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 0px;
+  background-color: rgb(255, 255, 255);
 }
 
 .mid-home-container {
@@ -67,14 +67,30 @@ li {
 
   background: linear-gradient(
       to right,
-      burlywood 30%,
-      rgba(245, 245, 220, 0) 50%
+      burlywood 15%,
+      rgba(245, 245, 220, 0) 60%
     ),
     url("../img/furniture1.jpg");
 
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
+}
+
+.showcase-container {
+  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.showcase-img {
+ height: 400px;
+  width: 400px;
+}
+
+.showcase-item-text {
+  text-align: center;
+  font-size: 2rem;
 }
 
 .mid-container {
@@ -88,7 +104,7 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: yellowgreen;
+  background-color: rgb(0, 0, 0);
 }
 /* Main */
 
