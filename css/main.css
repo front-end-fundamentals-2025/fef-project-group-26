@@ -1,5 +1,15 @@
 /*Fonts*/
+.bree-serif-regular {
+  font-family: "Bree Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.showcase-item-text {
+  font-family: "Bree Serif", serif;
+  font-weight: 200;
+  font-style: normal;
+}
 /*Logo*/
 #logo {
   font-weight: 600;
@@ -95,7 +105,7 @@ li {
 
 .showcase-item-text {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .mid-container {
