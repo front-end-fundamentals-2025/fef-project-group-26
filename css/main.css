@@ -114,4 +114,28 @@ li {
 /* Main */
 
 /*Footer*/
-/**/
+/*Media querys*/
+
+@media screen and (max-width: 1300px) {
+  .showcase-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .showcase-img {
+    height: 300px;
+    width: 300px;
+  }
+  
+}
+
+@media screen and (max-width: 660px) {
+  .showcase-container {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .showcase-img {
+    height: 300px;
+    width: 300px;
+  }
+}
