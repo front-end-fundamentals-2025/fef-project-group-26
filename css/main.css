@@ -254,6 +254,13 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
+  .mid-home-container {
+    height: 80vh;
+    margin-right: 0;
+    background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  }
   .showcase-img {
     height: 300px;
     width: 300px;
@@ -286,5 +293,8 @@ body {
     font-size: 25px;
   }
 
+  .mid-home-container {
+    height: 180vh;
+  }
     
 }
