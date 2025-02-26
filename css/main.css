@@ -9,9 +9,17 @@
   font-family: "Bree Serif", serif;
   font-weight: 200;
   font-style: normal;
+
   text-align: center;
   font-size: 3rem;
 }
+
+/* Hover on images */
+img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
 /*Logo*/
 #logo {
   font-weight: 600;
@@ -116,6 +124,49 @@ li {
   gap: 2rem;
 }
 
+/* Featured items Homepage */
+
+.bottom-home-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  height: 70vh;
+  margin: 0;
+
+  background: bisque;
+}
+
+.featured-item-title {
+  font-size: 50px;
+  color: black;
+
+  text-decoration: underline;
+
+  padding-left: 20px;
+  padding-top: 100px;
+}
+
+.showcase-container-home {
+  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5rem;
+
+  margin: 0 auto;
+}
+
+.showcase-item-text-home {
+  text-align: center;
+  font-size: 20px;
+}
+
+.showcase-img-home {
+  height: 200px;
+  width: 200px;
+  border-bottom: 7px solid rgb(235, 235, 235);
+}
+
 .showcase-img {
   height: 400px;
   width: 400px;
@@ -151,7 +202,7 @@ li {
 .product-1 {
   width: 500px;
   align-items: center;
- }
+}
 
  .product-1-text-container {
   display: flex;
@@ -166,9 +217,9 @@ li {
   font-style: normal;
   text-align: center;
   font-size: 2rem;
- }
+}
 
- .product-1-price {
+.product-1-price {
   font-family: "Bree Serif", serif;
   font-weight: 100;
   font-style: normal;
@@ -176,7 +227,7 @@ li {
   font-size: 1rem;
  }
 
- .product-1-button {
+.product-1-button {
   display: flex;
   align-content: center;
   font-family: "Bree Serif", serif;
@@ -184,9 +235,16 @@ li {
   font-style: normal;
   font-size: 2rem;
   margin-top: 10px;
- }
+}
 /* Main */
-
+body {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
 /*Footer*/
 /*Media querys*/
 
