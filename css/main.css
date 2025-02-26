@@ -193,7 +193,7 @@ li {
 
 .product-1-showcase {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Changed from grid-template-rows to grid-template-columns */
+  grid-template-columns: 1fr 150px 1fr 50px; /* Changed from grid-template-rows to grid-template-columns */
   column-gap: 10px; /* Changed from row-gap to column-gap */
   padding: 10px;
   background-color: tomato;
@@ -202,6 +202,7 @@ li {
 .product-1 {
   width: 500px;
   align-items: center;
+  margin-left: 100px;
 }
 
  .product-1-text-container {
@@ -269,4 +270,7 @@ body {
     height: 300px;
     width: 300px;
   }
+}
+
+@media screen and (min-width: 1100px) {
 }
