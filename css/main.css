@@ -128,30 +128,37 @@ li {
 
 .bottom-home-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding: 10px;
+
+  text-align: center;
+  width: 100%;
 
   height: 70vh;
   margin: 0;
+  margin-bottom: 0;
 
   background: bisque;
 }
 
 .featured-item-title {
-  font-size: 50px;
+  font-size: 40px;
   color: black;
 
   text-decoration: underline;
+  text-align: center;
 
-  padding-left: 20px;
-  padding-top: 100px;
+  margin-bottom: 50px;
 }
 
 .showcase-container-home {
   place-items: center;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5rem;
+  gap: 3rem;
 
   margin: 0 auto;
 }
@@ -193,7 +200,7 @@ li {
 
 .product-1-showcase {
   display: grid;
-  grid-template-columns: 1fr 150px 1fr 50px; /* Changed from grid-template-rows to grid-template-columns */
+  grid-template-columns: 1fr 1fr; /* Changed from grid-template-rows to grid-template-columns */
   column-gap: 10px; /* Changed from row-gap to column-gap */
   padding: 10px;
   background-color: tomato;
@@ -202,15 +209,7 @@ li {
 .product-1 {
   width: 500px;
   align-items: center;
-  margin-left: 100px;
 }
-
- .product-1-text-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
- }
 
 .product-1-text {
   font-family: "Bree Serif", serif;
@@ -225,8 +224,8 @@ li {
   font-weight: 100;
   font-style: normal;
   text-align: center;
-  font-size: 1rem;
- }
+  font-size: 2rem;
+}
 
 .product-1-button {
   display: flex;
@@ -247,6 +246,40 @@ body {
   overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 /*Footer*/
+.footer-container {
+  height: 150px;
+  width: 100%;
+  padding: 70px 0;
+  background-color: darkslategrey;
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  gap: 10rem;
+}
+
+.footer-container div {
+  text-align: center;
+}
+
+.footer-container div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.footer-container div a {
+  color: lightsteelblue;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-container a:hover {
+  color: white;
+}
+
 /*Media querys*/
 
 @media screen and (max-width: 1000px) {
@@ -254,16 +287,18 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
-  .mid-home-container {
-    height: 80vh;
-    margin-right: 0;
-    background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  }
   .showcase-img {
     height: 300px;
     width: 300px;
+  }
+
+  .showcase-img-home {
+    height: 120px;
+    width: 120px;
+  }
+
+  .featured-item-title {
+    font-size: 30px;
   }
 }
 
@@ -277,24 +312,4 @@ body {
     height: 300px;
     width: 300px;
   }
-}
-
-@media screen and (min-width: 1100px) {
-  .showcase-container-home {
-    gap: 5rem;
-  } 
-  
-  .showcase-img-home {
-    height: 300px;
-    width: 300px;
-  }
-
-  .showcase-item-text-home {
-    font-size: 25px;
-  }
-
-  .mid-home-container {
-    height: 180vh;
-  }
-    
 }
