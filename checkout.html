@@ -1,27 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    <Header> <p id="logo">FURNADA</p>
-        <div class= "top-container"></div>
-    <nav class="navbar">
-        <ul>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="top-container">
+      <header>
+        <p id="logo">FURNADA</p>
+
+        <nav class="navbar">
+          <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="products.html">PRODUCTS</a></li>
             <li><a href="checkout.html">CHECKOUT</a></li>
-        </ul>
-    
-        
-    </Header>
-    <main>
-        
-       
-        <div class= "bottom-container"></div>
-    </main>   
-</body>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="cart-page">
+      <table>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="img/Sofa-1.png" alt="beige sofa" />
+              <div>
+                <p>Beige Sofa</p>
+                <small>Price: $1,199</small>
+                <br />
+                <a href="#">Remove</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" /></td>
+          <td>$1,199</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-info">
+              <img src="img/Sofa-2.jpg" alt="blue sofa" />
+              <div>
+                <p>Blue Sofa</p>
+                <small>Price: $1,199</small>
+                <br />
+                <a href="#">Remove</a>
+              </div>
+            </div>
+          </td>
+          <td><input type="number" value="1" /></td>
+          <td>$2,800</td>
+        </tr>
+      </table>
+
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td>$3,999</td>
+          </tr>
+          <tr>
+            <td>Tax</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>$4,299</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <div class="column1">
+        <h3>Support</h3>
+        <a href="#">Contact Us</a>
+        <a href="#">Return Item</a>
+        <a href="#">FAQ</a>
+        <a href="#">Privacy Choices</a>
+        <a href="#">Payment Options</a>
+      </div>
+
+      <div class="column2">
+        <h3>About Us</h3>
+        <a href="#">Career</a>
+        <a href="#">Partners</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="column3">
+        <h3>Legal</h3>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Community Guidelines</a>
+      </div>
+    </div>
+  </body>
 </html>

@@ -15,12 +15,12 @@
 }
 
 /* Hover on images */
-img:hover {
+.bottom-home-container img:hover {
   transform: scale(1.05);
   transition: 0.3s ease-in-out;
 }
 
-/*Logo*/
+/*Log & Navbar*/
 #logo {
   font-weight: 600;
   font-size: 2rem;
@@ -70,6 +70,10 @@ li {
 }
 
 /* */
+body {
+  overflow-x: hidden;
+}
+
 .top-container {
   display: flex;
   justify-content: space-between;
@@ -83,6 +87,7 @@ li {
   padding: 10px;
 
   height: 100vh;
+  width: 100%;
   margin: 0;
 
   background: linear-gradient(
@@ -93,8 +98,9 @@ li {
     url("../img/furniture1.jpg");
 
   background-size: cover;
-  background-position: right;
+  background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .wrapper {
@@ -245,11 +251,78 @@ body {
   width: 100%;
   overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
+
+/* Shopping Cart / Checkout */
+.cart-page {
+  margin: 40px auto;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background: burlywood;
+  font-weight: normal;
+}
+
+td {
+  padding: 10px 5px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: rgb(216, 40, 40);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid burlywood;
+  width: 100%;
+  max-width: 450px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
 /*Footer*/
 .footer-container {
   height: 150px;
   width: 100%;
-  padding: 70px 0;
+  padding: 50px 0;
   background-color: darkslategrey;
   color: white;
   display: flex;
@@ -311,5 +384,13 @@ body {
   .showcase-img {
     height: 300px;
     width: 300px;
+  }
+
+  .footer-container {
+    gap: 5rem;
+  }
+
+  .cart-info p {
+    display: none;
   }
 }
