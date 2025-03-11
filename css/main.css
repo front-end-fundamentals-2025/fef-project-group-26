@@ -14,6 +14,12 @@
   font-size: 3rem;
 }
 
+.big-shoulders-display {
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
 /* Hover on images */
 img:hover {
   transform: scale(1.05);
@@ -198,44 +204,104 @@ li {
   background-color: rgb(0, 0, 0);
 }
 
-.product-1-showcase {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Changed from grid-template-rows to grid-template-columns */
-  column-gap: 10px; /* Changed from row-gap to column-gap */
-  padding: 10px;
-  background-color: tomato;
+/*Product 1 classes*/
+
+.p1-card {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.product-1 {
-  width: 500px;
-  align-items: center;
+.sofa-img {
+  width: 100%;
+  display: block;
 }
 
-.product-1-text {
-  font-family: "Bree Serif", serif;
-  font-weight: 200;
-  font-style: normal;
-  text-align: center;
-  font-size: 2rem;
+.p1-img-display {
+  overflow: hidden;
 }
 
-.product-1-price {
-  font-family: "Bree Serif", serif;
-  font-weight: 100;
-  font-style: normal;
-  text-align: center;
-  font-size: 2rem;
-}
-
-.product-1-button {
+.p1-img-showcase {
   display: flex;
-  align-content: center;
-  font-family: "Bree Serif", serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 2rem;
-  margin-top: 10px;
+  width: 700px;
+  transition: all 0.5s ease;
+  height: 700px;
 }
+
+.p1-img-showcase img {
+  min-width: 100%;
+}
+
+.p1-title {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.p1-rating {
+  font-size: 1.5rem;
+  color: #d8c813;
+}
+
+.p1-rating span {
+  font-family: "Big Shoulders", sans-serif;
+  color: #000000;
+}
+
+.p1-price {
+  font-family: "Big Shoulders", sans-serif;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.old-price span {
+  color: red;
+  text-decoration: line-through;
+}
+
+.new-price span {
+  color: rgb(23, 98, 168);
+}
+
+.p1-detail h2 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: capitalize;
+  padding-bottom: 0.6rem;
+}
+
+.p1-detail p {
+  font-weight: 200;
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+
+.purchase-info input,
+.purchase-info .button {
+  border: 1.5px solid #cecdcd;
+  border-radius: 25px;
+  text-align: center;
+  padding: 0.45rem 0.8rem;
+  outline: 0;
+  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.purchase-info input {
+  width: 60px;
+}
+
+.purchase-info .button {
+  color: white;
+  cursor: pointer;
+  background-color: rgb(23, 98, 168);
+}
+
+.purchase-info .button:hover {
+  opacity: 0.8;
+}
+
 /* Main */
 body {
   margin-left: 0;
