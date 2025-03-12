@@ -156,6 +156,11 @@ body {
   background: bisque;
 }
 
+.bottom-home-container img {
+  width: 200px;
+  height: 200px;
+}
+
 .featured-item-title {
   font-size: 40px;
   color: black;
@@ -228,8 +233,10 @@ body {
 .pDuct:hover .cart10 {
   bottom: 90px;
   opacity: 1;
-  padding: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
   text-decoration: none;
+  text-align: center;
 }
 
 .pDuct img {
