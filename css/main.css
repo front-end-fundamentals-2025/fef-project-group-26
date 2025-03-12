@@ -216,6 +216,27 @@ body {
   text-align: center;
 }
 
+.pDuct:hover .cart1,
+.pDuct:hover .cart2,
+.pDuct:hover .cart3,
+.pDuct:hover .cart4,
+.pDuct:hover .cart5,
+.pDuct:hover .cart6,
+.pDuct:hover .cart7,
+.pDuct:hover .cart8,
+.pDuct:hover .cart9,
+.pDuct:hover .cart10 {
+  bottom: 90px;
+  opacity: 1;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.pDuct img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 /*Product 1 classes*/
 
 .p1-card {
