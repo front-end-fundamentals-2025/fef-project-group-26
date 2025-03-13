@@ -451,6 +451,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px; /* Space between arrows */
+  padding
 }
 
 .pTotal {
@@ -458,6 +459,7 @@ body {
   border-bottom: 4px solid #f1f1f1;
   display: flex;
   align-items: center;
+  margin-left: 75px;
 }
 
 .basketTotalContainer {
@@ -481,6 +483,9 @@ body {
   gap: 10px;
 }
 
+h4 {
+  margin: 10px;
+}
 /*--------Footer--------*/
 .footer-container {
   height: 150px;
