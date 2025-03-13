@@ -121,6 +121,18 @@ body {
   color: white;
   font-size: 60px;
   width: 300px;
+  animation: slideInFromLeft 2s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%); /* Start from off-screen (left) */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateX(0); /* End at normal position */
+    opacity: 1; /* Fully visible */
+  }
 }
 
 .home-text {
@@ -354,14 +366,6 @@ body {
 
 /*--------Shopping Cart / Checkout--------*/
 
-.pTitle-CSS {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #000000;
-  text-decoration: none;
-  margin-top: auto;
-}
-
 .pContain {
   flex-wrap: wrap;
   display: flex;
@@ -381,29 +385,6 @@ body {
   border-bottom: 1px solid #f1f1f1;
 }
 
-.product img {
-  width: 80px;
-}
-
-.pTitle,
-.pPrice,
-.pQuantity,
-.pTotal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pTitle {
-  width: 45%;
-}
-
-.pPrice,
-.pQuantity,
-.pTotal {
-  width: 15%;
-}
-
 .pContain ion-icon {
   font-size: 25px;
   color: #4b0601;
@@ -414,15 +395,6 @@ body {
 
 .pCache img {
   width: 80px;
-}
-
-.pTitle,
-.pPrice,
-.pQuantity,
-.pTotal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .pHeader {
@@ -475,7 +447,7 @@ body {
 }
 
 .pCache {
-  width: 100%;
+  max-width: 650px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
