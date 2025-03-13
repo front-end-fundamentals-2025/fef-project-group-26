@@ -282,7 +282,7 @@ body {
   height: 300px;
   object-fit: cover;
 }
-/*--------Product 1 classes--------*/
+/*--------Product 1 (Detailed page) classes--------*/
 
 .p1-card {
   max-width: 1100px;
@@ -380,7 +380,7 @@ body {
   opacity: 0.8;
 }
 
-/* Main */
+/*--------Main--------*/
 body {
   margin-left: 0;
   margin-right: 0;
@@ -438,6 +438,12 @@ body {
   width: 80px;
 }
 
+.pCache {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .pHeader {
   width: 100%;
   max-width: 650px;
@@ -470,6 +476,7 @@ body {
   border-bottom: 4px solid #f1f1f1;
   display: flex;
   align-items: center;
+  margin-left: 75px;
 }
 
 .basketTotalContainer {
@@ -487,12 +494,9 @@ body {
   width: 10%;
 }
 
-.pCache {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+h4 {
+  margin: 10px;
 }
-
 /*--------Footer--------*/
 .footer-container {
   height: 150px;
@@ -526,13 +530,3 @@ body {
 .footer-container a:hover {
   color: white;
 }
-
-/*--------Media querys--------*/
-
-/*--------Home page query--------*/
-
-/*--------product page query--------*/
-@media screen and (max-width: 600px) {
-}
-/*--------Cart page query--------*/
-/*--------Detailed page query--------*/
