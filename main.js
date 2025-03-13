@@ -193,26 +193,26 @@ function displayCart() {
     productContainer.innerHTML = "";
     Object.values(cartItems).map((item) => {
       productContainer.innerHTML += `
-<div class="product">
-    <ion-icon name="close-circle" class="remove-item" data-tag="${
-      item.tag
-    }"></ion-icon>
-    <img src="./img/${item.tag}.jpg">
-    <span>${item.name}</span>
-</div>
-<div class="pPrice">$${item.price}.00</div>
-<div class="pQuantity">
-<ion-icon class="decrease" name="arrow-back-circle" data-tag="${
-        item.tag
-      }"></ion-icon>
-<span>${item.inCart}</span>
-<ion-icon class="increase" name="arrow-forward-circle" data-tag="${
-        item.tag
-      }"></ion-icon>
-</div>
-<div class="pTotal">
-$${item.inCart * item.price}.00
-</div>
+    <div class="cart-item">
+        <div class="product">
+            <ion-icon name="close-circle" class="remove-item" data-tag="${
+              item.tag
+            }"></ion-icon>
+            <img src="./img/${item.tag}.jpg" style="width: 80px; height: auto;">
+            <span>${item.name}</span>
+        </div>
+        <div class="pPrice">$${item.price}.00</div>
+        <div class="pQuantity">
+            <ion-icon class="decrease" name="arrow-back-circle" data-tag="${
+              item.tag
+            }"></ion-icon>
+            <span>${item.inCart}</span>
+            <ion-icon class="increase" name="arrow-forward-circle" data-tag="${
+              item.tag
+            }"></ion-icon>
+        </div>
+        <div class="pTotal">$${item.inCart * item.price}.00</div>
+    </div>
 `;
     });
 
