@@ -34,7 +34,7 @@
                 <div class="p1-imgs">
                     <div class="p1-img-display">
                        <div class="p1-img-showcase">
-                        <img src="img/Sofa-1.png" alt="sofa-image">
+                        <img src="img/Sofa-1.jpg" alt="sofa-image">
                        </div>
                     </div>
                 </div>
@@ -56,14 +56,26 @@
                     </div>
 
                     <div class="purchase-info">
-                        <button type="button" class="button">
+                        <button type="button" class="button" id="add-to-cart-button">
                             Add to cart 🛒
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-           <button class="product-1-button">Add to cart</button>
     </main> 
+
+    <script>
+        document.getElementById('add-to-cart-button').addEventListener('click', function() {
+            let product = {
+                name: "Beige Sofa",
+                tag: "Sofa-1",
+                price: 1099,
+                inCart: 0
+            };
+            cartNumbers(product);
+            totalCost(product);
+        });
+    </script>
 </body>
 </html>

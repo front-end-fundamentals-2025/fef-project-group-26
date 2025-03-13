@@ -127,6 +127,63 @@ function totalCost(product) {
   }
 }
 
+function removeItem(tag) {
+  let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+  let cartNumbers = parseInt(localStorage.getItem("cartNumbers"));
+  let cartCost = parseInt(localStorage.getItem("totalCost"));
+
+  if (cartItems[tag]) {
+    cartNumbers -= cartItems[tag].inCart;
+    cartCost -= cartItems[tag].price * cartItems[tag].inCart;
+    delete cartItems[tag];
+
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    localStorage.setItem("cartNumbers", cartNumbers);
+    localStorage.setItem("totalCost", cartCost);
+
+    document.querySelector(".cart span").textContent = cartNumbers;
+    displayCart();
+  }
+}
+
+function increaseQuantity(tag) {
+  let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+  let cartNumbers = parseInt(localStorage.getItem("cartNumbers"));
+  let cartCost = parseInt(localStorage.getItem("totalCost"));
+
+  cartItems[tag].inCart += 1;
+  cartNumbers += 1;
+  cartCost += cartItems[tag].price;
+
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+  localStorage.setItem("cartNumbers", cartNumbers);
+  localStorage.setItem("totalCost", cartCost);
+
+  document.querySelector(".cart span").textContent = cartNumbers;
+  displayCart();
+}
+
+function decreaseQuantity(tag) {
+  let cartItems = JSON.parse(localStorage.getItem("productsInCart"));
+  let cartNumbers = parseInt(localStorage.getItem("cartNumbers"));
+  let cartCost = parseInt(localStorage.getItem("totalCost"));
+
+  if (cartItems[tag].inCart > 1) {
+    cartItems[tag].inCart -= 1;
+    cartNumbers -= 1;
+    cartCost -= cartItems[tag].price;
+
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+    localStorage.setItem("cartNumbers", cartNumbers);
+    localStorage.setItem("totalCost", cartCost);
+
+    document.querySelector(".cart span").textContent = cartNumbers;
+    displayCart();
+  } else {
+    removeItem(tag);
+  }
+}
+
 function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
@@ -137,15 +194,21 @@ function displayCart() {
     Object.values(cartItems).map((item) => {
       productContainer.innerHTML += `
 <div class="product">
-    <ion-icon name="close-circle"></ion-icon>
+    <ion-icon name="close-circle" class="remove-item" data-tag="${
+      item.tag
+    }"></ion-icon>
     <img src="./img/${item.tag}.jpg">
     <span>${item.name}</span>
 </div>
 <div class="pPrice">$${item.price}.00</div>
 <div class="pQuantity">
-<ion-icon class="decrease" name="arrow-back-circle"></ion-icon>
+<ion-icon class="decrease" name="arrow-back-circle" data-tag="${
+        item.tag
+      }"></ion-icon>
 <span>${item.inCart}</span>
-<ion-icon class="increase" name="arrow-forward-circle"></ion-icon>
+<ion-icon class="increase" name="arrow-forward-circle" data-tag="${
+        item.tag
+      }"></ion-icon>
 </div>
 <div class="pTotal">
 $${item.inCart * item.price}.00
@@ -162,6 +225,29 @@ $${item.inCart * item.price}.00
     $${cartCost}.00
     </h4>
     `;
+
+    // Add event listeners to remove icons
+    let removeIcons = document.querySelectorAll(".remove-item");
+    removeIcons.forEach((icon) => {
+      icon.addEventListener("click", () => {
+        removeItem(icon.getAttribute("data-tag"));
+      });
+    });
+
+    // Add event listeners to increase and decrease icons
+    let decreaseIcons = document.querySelectorAll(".decrease");
+    decreaseIcons.forEach((icon) => {
+      icon.addEventListener("click", () => {
+        decreaseQuantity(icon.getAttribute("data-tag"));
+      });
+    });
+
+    let increaseIcons = document.querySelectorAll(".increase");
+    increaseIcons.forEach((icon) => {
+      icon.addEventListener("click", () => {
+        increaseQuantity(icon.getAttribute("data-tag"));
+      });
+    });
   }
 }
 

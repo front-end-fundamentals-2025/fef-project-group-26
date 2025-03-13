@@ -354,6 +354,14 @@ body {
 
 /*--------Shopping Cart / Checkout--------*/
 
+.pTitle-CSS {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  margin-top: auto;
+}
+
 .pContain {
   flex-wrap: wrap;
   display: flex;
@@ -371,6 +379,29 @@ body {
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #f1f1f1;
+}
+
+.product img {
+  width: 80px;
+}
+
+.pTitle,
+.pPrice,
+.pQuantity,
+.pTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pTitle {
+  width: 45%;
+}
+
+.pPrice,
+.pQuantity,
+.pTotal {
+  width: 15%;
 }
 
 .pContain ion-icon {
@@ -444,7 +475,7 @@ body {
 }
 
 .pCache {
-  max-width: 650px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
