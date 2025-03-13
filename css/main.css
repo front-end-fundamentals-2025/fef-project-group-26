@@ -116,7 +116,7 @@ body {
 .home-title {
   color: white;
   font-size: 60px;
-  width: 300px;
+  max-width: 300px;
   animation: slideInFromLeft 2s ease-out;
 }
 
@@ -134,7 +134,7 @@ body {
 .home-text {
   color: aliceblue;
   font-size: 20px;
-  width: 300px;
+  max-width: 300px;
 }
 
 .showcase-container {
@@ -156,6 +156,17 @@ body {
 
   header {
     flex-direction: column;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .home-title {
+    font-size: 35px;
+  }
+
+  .home-text {
+    font-size: 15px;
   }
 }
 
@@ -451,6 +462,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px; /* Space between arrows */
+  border-bottom: 4px solid #f1f1f1;
 }
 
 .pTotal {
@@ -489,9 +501,8 @@ body {
   background-color: darkslategrey;
   color: white;
   display: flex;
-  justify-content: center;
 
-  gap: 10rem;
+  justify-content: space-evenly;
 }
 
 .footer-container div {
